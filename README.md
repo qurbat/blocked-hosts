@@ -48,7 +48,7 @@ Owing primarily to the gathering process of hostnames, the list of blocked hostn
 - The provided `blocktest.sh` script can be used to verify these results.
 
 ```
-./script/blocktest.sh lists/compiled_block_list.txt
+./script/blocktest.sh compiled_block_list.txt
 ```
 
 ![blocktest.sh](https://i.imgur.com/YXHP6WT.gif)
