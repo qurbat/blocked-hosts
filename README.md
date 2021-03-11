@@ -16,15 +16,15 @@ ucweb.com. 0 IN A 49.205.171.200
 
 As a uniform list of suitable root domains was not readily available, several publicly available domain name sets were collated and used as input. The collated dataset was modified to exclude subdomains as well as any duplicate entries. The process used for excluding subdomains was not ideal, as a result of which a number of root domain names were accidentally omitted, too. In total, the collated dataset (which is not released here) includes exactly `22673297` entries.
 
-1. **Top 1 Million** from [http://s3.amazonaws.com/alexa-static/top-1m.csv.zip](Alexa)
+1. **Top 1 million** from [Alexa](http://s3.amazonaws.com/alexa-static/top-1m.csv.zip)
 
 The version of the `top-1m.csv` list available as of today does not actually contain `1000000` lines. After support for the list was officially discontinued, the actual number of domain names included in it varies on any given day. At the time this list was pulled it contained roughly 700,000 lines. The test returned a total of `794` blocked hostnames. Due to the popular nature of the domain names included in this list, a lot of these websites might have already been known by the general public to have been blocked.
 
-2. **Top 10 Million** from [https://www.domcop.com/files/top/top10milliondomains.csv.zip](DomCop)
+2. **Top 10 million** from [DomCop](https://www.domcop.com/files/top/top10milliondomains.csv.zip)
 
 This list was reduced to roughly 6,000,000 lines after subdomains and subsequent duplicate entries were pruned from the list. The test with this dataset returned a total of `1254` blocked hostnames, with a negligible overlap in results from the Alexa set.
 
-3. Domains released by [https://dataset.domainsproject.org](Domains Project)
+3. **Collections** released by [Domains Project](https://dataset.domainsproject.org)
 
 ```
 .IN dataset [Pruned to 582582 entries] [190 blocked]
@@ -61,4 +61,4 @@ The `compiled_block_list.txt` file referenced here is present in the `lists` dir
 
 ### Notes
 
-The intention behind this project is of introducing some amount of transparency to the otherwise opaque website blocking processes followed by Telecommunications and Internet Service Providers in India. It is hoped that this data is useful to those researching network censorship in India. This project was inspired by the paper [https://arxiv.org/abs/1912.08590]('How India Censors the Web'), authored by Kushagra Singh, Gurshabad Grover, and Varun Bansal.
+The intention behind this project is of introducing some amount of transparency to the otherwise opaque website blocking processes followed by Telecommunications and Internet Service Providers in India. It is hoped that this data is useful to those researching network censorship in India. This project was inspired by the paper *[How India Censors the Web](https://arxiv.org/abs/1912.08590)* authored by Kushagra Singh, Gurshabad Grover, and Varun Bansal.
