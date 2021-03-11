@@ -14,7 +14,7 @@ ucweb.com. 0 IN A 49.205.171.200
 
 ## Data
 
-As a uniform list of suitable root domains was not readily available, several publicly available domain name sets were collated and used as input. The collated dataset was modified to exclude subdomains as well as any duplicate entries. The process used for excluding subdomains was not ideal, as a result of which a number of root domain names were accidentally omitted, too. In total, the collated of dataset of unique domain names (not released here) includes exactly `22673297` entries.
+As a uniform list of suitable root domains was not readily available, several publicly available domain name sets were collated and used as input. The collated dataset was modified to exclude subdomains as well as any duplicate entries. The process used for excluding subdomains was not ideal, as a result of which a number of root domain names were accidentally omitted, too. In total, the collated dataset of unique hostnames (not released here) includes exactly `22673297` entries.
 
 1. **Top 1 million** from [Alexa](http://s3.amazonaws.com/alexa-static/top-1m.csv.zip)
 
