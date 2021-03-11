@@ -37,9 +37,9 @@ This list was reduced to roughly 6,000,000 lines after subdomains and subsequent
 Out of the hostnames queried, a total of `2731` individual hostnames [were found](https://github.com/qurbat/act-censorship/blob/main/compiled_block_list.txt) to have been blocked.
 
 #### Datasets
-Despite their comparatively smaller size, the lists made available by Alexa and DomCop resulted in more than half of the final compiled list of blocked hosts. This is most likely due to the popularity of the hostnames included in these lists. The lists made available by Domains Project were however found to be far more useful for uncovering otherwise *obscure* blocked websites.
+Despite their comparatively smaller size, the lists made available by Alexa and DomCop resulted in more than half of the final compiled list of blocked hosts. This is most likely due to the popularity of the hostnames included in these lists. The lists made available by Domains Project were found to be far more useful for uncovering otherwise *obscure* blocked websites.
 
-Primarily owing to the nature of the processes involved in gathering hostnames, the list of blocked hostnames released here is not fully representative of all of the those that are blocked by ACT Fibernet. For that purpose, a list containing contextually gathered hostnames would provide better results.
+**Note:** The list of blocked hostnames released here is not fully representative of all of the those that are blocked by ACT Fibernet, owing partly to the nature of and processes involved in gathering a list of hostnames.
 
 ### Reproducibility
 
