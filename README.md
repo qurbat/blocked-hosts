@@ -43,7 +43,7 @@ Owing primarily to the gathering process of hostnames, the list of blocked hostn
 
 ### Reproducibility
 
-- The provided `blocktest.sh` script can be used to verify these results.
+The blocktest.sh file can be used to verify the results included in the `compiled_block_list.txt` list.
 
 ```
 ./blocktest.sh compiled_block_list.txt
@@ -51,9 +51,7 @@ Owing primarily to the gathering process of hostnames, the list of blocked hostn
 
 ![blocktest.sh](https://i.imgur.com/YXHP6WT.gif)
 
-The `compiled_block_list.txt` file referenced here is present in the `lists` directory.
-
-- The MassDNS tool can be used to carry out these tests from scratch.
+[MassDNS](https://github.com/blechschmidt/massdns) can be used to carry out these tests from scratch.
 
 ```
 ./massdns -r lists/act_resolver.txt -s 10000 -t A lists/10m_domain_sorted.txt > output/10m_dns_responses.txt
@@ -61,4 +59,4 @@ The `compiled_block_list.txt` file referenced here is present in the `lists` dir
 
 ### Notes
 
-The intention behind this project is of introducing some amount of transparency to the otherwise opaque website blocking processes followed by Telecommunications and Internet Service Providers in India. It is hoped that this data is useful to those researching network censorship in India. This project was inspired by the paper *[How India Censors the Web](https://arxiv.org/abs/1912.08590)* authored by Kushagra Singh, Gurshabad Grover, and Varun Bansal.
+The intention behind cataloging blocked hostnames is to introduce some amount of transparency to an otherwise opaque blocking process followed by Telecommunications and Internet Service Providers in India. It is hoped that this data is useful to those researching network censorship in India. This project was inspired by the paper *[How India Censors the Web](https://arxiv.org/abs/1912.08590)* authored by Kushagra Singh, Gurshabad Grover, and Varun Bansal.
