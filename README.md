@@ -2,7 +2,7 @@
 This repository contains a list of hostnames that are known to be blocked on ACT Fibernet's network.
 
 ## Methodology
-The censorship technique employed by ACT Fibernet seemingly poisons the DNS `A record` entry for each root domain present on their block list. The poisoned `A` record further appears to consistently point to a single, static IP address `(49.205.171.200)`. This knowledge is useful for enumerating a large set of hostnames in order to infer a proportionately comprehensive list of blocked hostnames.
+The censorship technique employed by ACT Fibernet seemingly poisons the DNS `A record` entry for each root domain present on their block list. The poisoned `A` record further appears to consistently point to a single, static IP address `49.205.171.200`. This knowledge is useful for enumerating a large set of hostnames in order to infer a proportionately comprehensive list of blocked hostnames.
 
 ```
 ...
@@ -52,7 +52,7 @@ The [blocktest.sh](https://github.com/qurbat/act-censorship/blob/main/blocktest.
 
 ![blocktest.sh](https://i.imgur.com/YXHP6WT.gif)
 
-**Note:** Due to the DNS response expected by the script `(49.205.171.200)`, if used without modification, it will only function properly ACT Fibernet users.
+**Note:** The script expects a DNS response of `IN A 49.205.171.200` when looking for a blocked host. If you intend to run the script from another Internet service provider, you will forst have to modify the response that is to be expected for a blocked host on [line 16](https://github.com/qurbat/act-censorship/blob/main/blocktest.sh#L16) of the script.
 
 #### MassDNS
 [MassDNS](https://github.com/blechschmidt/massdns) can be used to query a sizeable number of hostnames with speed. The responses from these DNS queries can then be used to extraploate blocked hosts.
