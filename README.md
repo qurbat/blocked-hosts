@@ -2,7 +2,7 @@
 This repository contains a list of hostnames that are known to be blocked on ACT Fibernet's network.
 
 ## Methodology
-The censorship technique employed by ACT Fibernet is of poisoning the DNS `A record` entry for each root domain present on their block list.
+The censorship technique employed by ACT Fibernet seemingly poisons the DNS `A record` entry for each root domain present on their block list. The poisoned `A` record further appears to consistently point to a single static IP address. This knowledge is useful for enumerating a large set of hostnames in order to infer a proportionately comprehensive list of blocked hostnames.
 
 ```
 ...
@@ -11,8 +11,6 @@ qq.com. 0 IN A 49.205.171.200
 ucweb.com. 0 IN A 49.205.171.200
 ...
 ```
-
-For all blocked hostnames, the poisoned `A` record consistently appears to point to a single static IP address. This knowledge is useful for enumerating a large set of hostnames in order to infer a proportionately comprehensive list of blocked hostnames.
 
 ## Data
 
