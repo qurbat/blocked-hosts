@@ -44,15 +44,14 @@ Despite their comparatively smaller size, the lists made available by Alexa and 
 ### Reproducibility
 
 #### act-blocktest.sh
-[blocktest.sh](https://github.com/qurbat/act-censorship/blob/main/blocktest.sh) can be used to verify the results included in the `compiled_block_list.txt` list.
 
 ```
-./blocktest.sh compiled_block_list.txt
+./act-blocktest.sh compiled_block_list.txt
 ```
 
-![blocktest.sh](https://i.imgur.com/YXHP6WT.gif)
+![act-blocktest.sh](https://i.imgur.com/YXHP6WT.gif)
 
-**Note:** The script expects a response of `IN A 49.205.171.200` to identify a blocked host. If you intend to run the script using the network of a service provider other than ACT, you will have to modify the expected response for identifying a blocked host on [Line 16](https://github.com/qurbat/act-censorship/blob/main/blocktest.sh#L16).
+**Note:** The script expects a response of `IN A 49.205.171.200` to identify a blocked host. If you intend to run the script using the network of a service provider other than ACT, you will have to modify the expected response for identifying a blocked host on [Line 16](https://github.com/qurbat/act-censorship/blob/main/blocktest.sh#L16) accordingly.
 
 #### MassDNS
 [MassDNS](https://github.com/blechschmidt/massdns) can be used to query a sizeable number of hostnames with speed. The responses from these DNS queries can then be used to extraploate blocked hosts.
