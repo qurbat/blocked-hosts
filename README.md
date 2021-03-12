@@ -43,8 +43,8 @@ Despite their comparatively smaller size, the lists made available by Alexa and 
 
 ### Reproducibility
 
-#### blocktest.sh
-The [blocktest.sh](https://github.com/qurbat/act-censorship/blob/main/blocktest.sh) bash script can be used to verify the results included in the `compiled_block_list.txt` list.
+#### act-blocktest.sh
+[blocktest.sh](https://github.com/qurbat/act-censorship/blob/main/blocktest.sh) can be used to verify the results included in the `compiled_block_list.txt` list.
 
 ```
 ./blocktest.sh compiled_block_list.txt
