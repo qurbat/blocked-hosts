@@ -35,13 +35,15 @@ This list was reduced to roughly 6,000,000 lines after subdomains and subsequent
 
 4. **List of potentially blocked hostnames by [Kushagra Singh](https://github.com/kush789/How-India-Censors-The-Web-Data/blob/master/potentially_blocked_unique_hostnames.txt)**
 
+This list, released as part of the paper "How India Censors the Web" included a list of roughly 5,000 potentially blocked hostnames.
+
 ### Results
 Out of the hostnames queried, a total of `3592` individual hostnames [were found](https://github.com/qurbat/act-censorship/blob/main/compiled_block_list.txt) to have been blocked.
 
 #### Datasets
-Despite their comparatively smaller sizes, the lists made available by Alexa and DomCop contained more than half of the hostnames present in the final compiled block list. This observation can likely be attributed to the precondition of popularity around which the lists are meant to have been centered. The lists made available by Domains Project were found to be extremely useful for uncovering otherwise *"obscure"* blocked hostnames. The dataset made available as part of the paper "How India Censors the Web" proved to be quite useful for extracting blocked hostnames that did not feature in the other lists.
+Despite their comparatively smaller sizes, the lists made available by Alexa and DomCop contained more than half of the hostnames present in the final compiled block list. This observation can likely be attributed to the precondition of popularity around which the lists are meant to have been centered. The lists made available by Domains Project were found to be extremely useful for uncovering hostnames that might otherwise be considered *"obscure"*. The list made available as part of the paper "How India Censors the Web" proved to be quite useful for discovering some obscure hostnames that did not feature in the other lists.
 
-**Note:** The list of blocked hostnames released here is neither definitive nor fully representative of all hostnames that might be blocked by ACT Fibernet at any given time.
+**Note:** The list of blocked hostnames released here is not fully representative of all hostnames that might be blocked by ACT Fibernet at any given time.
 
 ### Reproducibility
 
@@ -51,7 +53,7 @@ Despite their comparatively smaller sizes, the lists made available by Alexa and
 ./act-blocktest.sh compiled_block_list.txt
 ```
 
-**Note:** The script expects a response of `IN A 49.205.171.200` to identify a blocked host. If you intend to run the script using the network of a service provider other than ACT, you will have to modify the expected response for identifying a blocked host on [Line 16](https://github.com/qurbat/act-censorship/blob/main/blocktest.sh#L16) accordingly.
+**Note:** The script expects a response of `IN A 49.205.171.200` to identify a blocked host. If you intend to run the script using the network of an Internet service provider other than ACT, you will have to modify the expected response for identifying a blocked host on [line 16](https://github.com/qurbat/act-censorship/blob/main/blocktest.sh#L16) accordingly.
 
 #### MassDNS
 [MassDNS](https://github.com/blechschmidt/massdns) can be used to query a sizeable number of hostnames with speed. The responses from these DNS queries can then be used to extraploate blocked hosts.
@@ -63,6 +65,4 @@ cat output/10m_dns_responses.txt | grep "POISONED_A_RECORD_HERE" > 10m_blocked.t
 
 ### Notes
 
-This repository was inspired by the paper *[How India Censors the Web](https://arxiv.org/abs/1912.08590)* authored by Kushagra Singh, Gurshabad Grover, and Varun Bansal. The primary intention behind the repository is to introduce some amount of transparency to the otherwise opaque process of web censorship followed by telecommunications and Internet service providers in India.
-
-It is hoped that this data will be useful to those researching the scale and impact of web censorship in India.
+This repository was inspired by the paper *[How India Censors the Web](https://arxiv.org/abs/1912.08590)* authored by Kushagra Singh, Gurshabad Grover, and Varun Bansal. The primary intention behind this repository is to introduce some amount of transparency to the otherwise opaque processes associated with web censorship in India. It is hoped that this data will be useful to those researching the scale and impact of web censorship in India.
