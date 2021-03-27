@@ -16,7 +16,7 @@ ucweb.com. 0 IN A 49.205.171.200
 
 ## Data
 
-As a uniform list of suitable hostnames was not readily available, several publicly available domain name lists were collated and used as input. The collated dataset was further modified to exclude subdomains and duplicate entries. The process used for excluding subdomains was not ideal, as a result of which a small portion of first level domains were accidentally omitted, too.
+As a uniform list of suitable hostnames was not readily available, several publicly available domain name lists were collated and used as input. The collated dataset was further modified to exclude subdomains and duplicate entries. The process used for excluding subdomains was not ideal, as a result of which a small portion of first level domains were accidentally omitted from the compiled list.
 
 1. **Top 1 million from [Alexa](http://s3.amazonaws.com/alexa-static/top-1m.csv.zip)**
 
@@ -42,8 +42,12 @@ This list, released as part of the paper "How India Censors the Web" includes ar
 ### Results
 Out of the hostnames queried, a total of `3592` individual hostnames [were found](https://github.com/qurbat/act-censorship/blob/main/compiled_block_list.txt) to have been censored.
 
-#### Datasets
-The lists made available by Alexa and DomCop contained more than half of the hostnames present in the final compiled block list despite their comparitive differences in their size. This can be attributed to the precondition of popularity around which the two lists are meant to be centered. The lists made available by Domains Project were found to be extremely useful for uncovering hostnames that might be considered *"obscure"*. The list made available as part of the data from the paper "How India Censors the Web" proved to be quite useful for discovering even more obscure hostnames that did not feature in the other lists.
+### Source data
+The lists made available by Alexa and DomCop contained more than half of the hostnames present in the final compiled block list despite their comparitive differences in their size. This can be attributed to the precondition of popularity around which the two lists are meant to be centered.
+
+The lists made available by Domains Project were found to be extremely useful for uncovering hostnames that might be considered *"obscure"*.
+
+The list made available as part of the data from the paper "How India Censors the Web" proved to be quite useful for discovering even more obscure hostnames that did not feature in the other lists.
 
 **Note:** The list of blocked hostnames released here is not representative of all of the hostnames that might be blocked by ACT Fibernet at any given time.
 
