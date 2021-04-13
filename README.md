@@ -26,7 +26,7 @@ As a uniform list of suitable hostnames was not readily available, several publi
 
 The method used for extracting first level domains was not ideal, due to which a small portion of hostnames were omitted from the compiled test list. 
 
-### Results
+## Results
 
 A current list of blocked hostnames can be found [here](https://github.com/qurbat/act-censorship/blob/main/compiled_block_list.txt). Historic results are available in the `output` directory.
 
