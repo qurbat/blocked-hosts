@@ -24,7 +24,7 @@ As a uniform list of suitable hostnames was not readily available, several publi
 
 4. **List from [How India Censors the Web](https://github.com/kush789/How-India-Censors-The-Web-Data/blob/master/potentially_blocked_unique_hostnames.txt)**
 
-The processes used for extracting first level domains were not ideal and a small portion of hostnames were accidentally omitted from the compiled list as a result.
+The processes used for extracting first level domains were not ideal and a small portion of hostnames were omitted from the compiled list as a result.
 
 ### Results
 
@@ -38,15 +38,15 @@ A current list of blocked hostnames can be found [here](https://github.com/qurba
 
 The lists published here are not meant to be fully representative of all of the hostnames that might be blocked by ACT Fibernet at a given time.
 
-### Reproducibility
+## Reproducibility
 
-ACT Fibernet users can verify a list of blocked hostnames by using the `act-blocktest.sh` script.
+ACT Fibernet users can verify a list of blocked hostnames by using the `blocktest.sh` script.
 
 ```
-./act-blocktest.sh compiled_block_list.txt
+./blocktest.sh compiled_block_list.txt
 ```
 
-Note: The `act-blocktest.sh` script expects a response of `IN A 202.83.21.14` to identify a blocked host. If you intend to run the script using the network of an Internet service provider other than ACT Fibernet, you will have to modify the expected response for identifying a blocked host on [line 16](https://github.com/qurbat/act-censorship/blob/main/blocktest.sh#L16) accordingly.
+Note: The `blocktest.sh` script expects a response of `IN A 202.83.21.14` to identify a blocked host. If you intend to run the script using the network of an Internet service provider other than ACT Fibernet, you will have to modify the expected response for identifying a blocked host on [line 16](https://github.com/qurbat/act-censorship/blob/main/blocktest.sh#L16) accordingly.
 
 ### MassDNS
 [MassDNS](https://github.com/blechschmidt/massdns) can be used to query a sizeable number of hostnames with speed. The responses from these DNS queries can then be used to extraploate blocked hosts.
