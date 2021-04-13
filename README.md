@@ -60,6 +60,6 @@ cat output/massdns_query_results.txt | grep "<POISONED_A_RECORD_IP>" > results.t
 
 ## Notes
 
-This repository was inspired by the paper *[How India Censors the Web](https://arxiv.org/abs/1912.08590)* authored by Kushagra Singh, Gurshabad Grover, and Varun Bansal. The primary intention behind this repository is to introduce some amount of transparency to the otherwise opaque processes associated with web censorship in India.
+This repository was inspired by the paper [How India Censors the Web](https://arxiv.org/abs/1912.08590) authored by Kushagra Singh, Gurshabad Grover, and Varun Bansal. The primary intention behind this repository is to introduce some amount of transparency to the otherwise opaque processes associated with web censorship in India.
 
 It is hoped that this data will be useful to those researching the scale and impact of web censorship in India.
