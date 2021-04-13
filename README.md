@@ -24,7 +24,7 @@ As a uniform list of suitable hostnames was not readily available, several publi
 
 4. **List from [How India Censors the Web](https://github.com/kush789/How-India-Censors-The-Web-Data/blob/master/potentially_blocked_unique_hostnames.txt)**
 
-The processes used for extracting first level domains were not ideal and a small portion of hostnames were omitted from the compiled list as a result.
+The method used for extracting first level domains was not ideal, due to which a small portion of hostnames were omitted from the compiled test list. 
 
 ### Results
 
@@ -32,8 +32,8 @@ A current list of blocked hostnames can be found [here](https://github.com/qurba
 
 | date of test   | total hosts  | removed since last test    | added since last test            |
 |----------------|--------------|----------------------------|----------------------------------|
-| March 28, 2021 | 3593         | N/A                        | N/A                              |
-| April 13, 2021 | 3419         | 179 hosts removed          | 0 hosts added                    |
+| March 28, 2021 | 3593         | -                          | -                                |
+| April 13, 2021 | 3419         | 179 hosts removed          | -                                |
 |                |              |                            |                                  |
 
 **Note:** The lists published here are not meant to be fully representative of all of the hostnames that might be blocked by ACT Fibernet at a given time.
