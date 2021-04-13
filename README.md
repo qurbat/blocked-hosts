@@ -40,9 +40,7 @@ The lists published here are not meant to be fully representative of all of the 
 
 ## Reproducibility
 
-### blocktest
-
-ACT Fibernet users can verify a list of blocked hostnames by using the `blocktest.sh` script. The script expects a response of `IN A 202.83.21.14` to identify a blocked host.
+ACT Fibernet users can verify a list of blocked hostnames by using the `blocktest.sh` script provided in this repository. The script expects a response of `IN A 202.83.21.14` to identify a blocked host.
 
 ```
 ./blocktest.sh compiled_block_list.txt
