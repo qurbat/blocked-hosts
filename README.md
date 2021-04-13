@@ -40,7 +40,7 @@ The lists published here are not meant to be fully representative of all of the 
 
 ## Reproducibility
 
-### blocktest.sh
+### blocktest
 
 ACT Fibernet users can verify a list of blocked hostnames by using the `blocktest.sh` script.
 
