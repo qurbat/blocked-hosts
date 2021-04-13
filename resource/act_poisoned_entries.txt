@@ -1,0 +1,4 @@
+# This file contains a list of IP addresses that DNS records hijacked by ACT point to.
+ 
+202.83.21.14 #APR-21
+49.205.171.200 #MAR-21

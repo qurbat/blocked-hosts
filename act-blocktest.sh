@@ -13,7 +13,7 @@ echo "The script will query a total of $count hostnames."
 sleep 1
 
 while IFS= read -r line; do
-  host $line | grep "49.205.171.200" > /dev/null && let "blocked=blocked+1"
+  host $line | grep "202.83.21.14" > /dev/null && let "blocked=blocked+1"
   let "current=current+1"
   echo -ne "[TOTAL]: $count [CURRENT]: $current [BLOCKED]: $blocked"\\r
 done < "$1"

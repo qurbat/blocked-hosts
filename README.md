@@ -1,14 +1,16 @@
 # act-censorship
-This repository houses a list of websites known to be blocked by ACT Fibernet. 
+This repository houses a periodically updated list of websites known to be blocked by ACT Fibernet.
 
 ## Methodology
-One of the web censorship techniques employed by ACT Fibernet is that of poisoning the DNS `A record` entry for each root domain present on their block list. The poisoned DNS record appears to so far consistently point to one partiular IP address, the knowledge of which becomes useful when querying a large list of hostnames with the intent of inferring a list of blocked hostnames.
+One of the web censorship techniques employed by ACT Fibernet is that of poisoning the DNS `A record` entry for each root domain present on their block list.
 
 ```
-tencent.com. 0 IN A 49.205.171.200
-qq.com. 0 IN A 49.205.171.200
-ucweb.com. 0 IN A 49.205.171.200
+tencent.com. 0 IN A 202.83.21.14
+qq.com. 0 IN A 202.83.21.14
+ucweb.com. 0 IN A 202.83.21.14
 ```
+
+The poisoned entry appears to consistently point toward a single IP address for a period of at least a few weeks. This characteristic enables fingerprinting of blocked hostnames, and is useful when querying a large list of hostnames in order to deduce a proportionate list of blocked hostnames.
 
 ## Data
 
@@ -22,33 +24,36 @@ As a uniform list of suitable hostnames was not readily available, several publi
 
 4. **List from [How India Censors the Web](https://github.com/kush789/How-India-Censors-The-Web-Data/blob/master/potentially_blocked_unique_hostnames.txt)**
 
-The process used for extracting first level domains was not ideal, as a result of which a small portion of hostnames were accidentally omitted from the compiled list.
+The processes used for extracting first level domains were not ideal and a small portion of hostnames were accidentally omitted from the compiled list as a result.
 
 ### Results
 
-In total, `3592` individual hostnames [were found](https://github.com/qurbat/act-censorship/blob/main/compiled_block_list.txt) being blocked. Please note that this list of blocked hostnames is not complete or fully representative of all of the hostnames that might be blocked by ACT Fibernet at any given time.
+A current list of blocked hostnames can be found [here](https://github.com/qurbat/act-censorship/blob/main/compiled_block_list.txt). Historic results are available in the `output` directory.
 
-### Source data
-The lists made available by Alexa and DomCop contained more than half of the hostnames present in the final compiled list of blocked hostnames despite the comparitive difference in their sizes. Domains Project data was particularly useful for uncovering *obscure* blocked hosts. The list made available as part of the paper [How India Censors the Web](https://arxiv.org/abs/1912.08590) proved to be useful for further discovering obscure hostnames that did not feature in the other lists.
+| date of test   | total hosts  | removed since last test    | added since last test            |
+|----------------|--------------|----------------------------|----------------------------------|
+| March 28, 2021 | 3593         | N/A                        | 3593 new hosts                   |
+| April 13, 2021 | 3419         | 179 hosts removed          |  0 new hosts                     |
+|                |              |                            |                                  |
 
-## Reproducibility
+The lists published here are not meant to be fully representative of all of the hostnames that might be blocked by ACT Fibernet at a given time.
 
-#### act-blocktest.sh
+### Reproducibility
+
+ACT Fibernet users can verify a list of blocked hostnames by using the `act-blocktest.sh` script.
 
 ```
 ./act-blocktest.sh compiled_block_list.txt
 ```
 
-**Note:** The script expects a response of `IN A 49.205.171.200` for identifying blocked hosts.
+Note: The `act-blocktest.sh` script expects a response of `IN A 202.83.21.14` to identify a blocked host. If you intend to run the script using the network of an Internet service provider other than ACT Fibernet, you will have to modify the expected response for identifying a blocked host on [line 16](https://github.com/qurbat/act-censorship/blob/main/blocktest.sh#L16) accordingly.
 
-If you intend to run the script using the network of an Internet service provider other than ACT, you will have to modify the expected response for identifying a blocked host on [line 16](https://github.com/qurbat/act-censorship/blob/main/blocktest.sh#L16) accordingly.
-
-#### MassDNS
+### MassDNS
 [MassDNS](https://github.com/blechschmidt/massdns) can be used to query a sizeable number of hostnames with speed. The responses from these DNS queries can then be used to extraploate blocked hosts.
 
 ```
-./massdns -r lists/act_resolver.txt -s 10000 -t A lists/10m_domain_sorted.txt > output/10m_dns_responses.txt
-cat output/10m_dns_responses.txt | grep "POISONED_A_RECORD_HERE" > 10m_blocked.txt
+./massdns -r resource/resolver.txt -s 10000 -t A <input_domain_list.txt> output/massdns_query_results.txt
+cat output/massdns_query_results.txt | grep "<POISONED_A_RECORD_IP>" > results.txt
 ```
 
 ## Notes
