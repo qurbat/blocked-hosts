@@ -1,5 +1,5 @@
 # act-censorship
-This repository houses an up-to-date list of websites known to be blocked by ACT Fibernet.
+This repository houses periodically updated lists of websites known to be blocked on ACT Fibernet's network.
 
 ## Methodology
 One of the web censorship techniques employed by ACT Fibernet is that of poisoning the DNS `A record` entry for each root domain present on their block list.
