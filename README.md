@@ -1,5 +1,5 @@
 # act-censorship
-This repository houses a periodically updated list of websites known to be blocked by ACT Fibernet.
+This repository houses periodically updated lists of websites known to be blocked on ACT Fibernet's network.
 
 ## Methodology
 One of the web censorship techniques employed by ACT Fibernet is that of poisoning the DNS `A record` entry for each root domain present on their block list.
@@ -24,9 +24,9 @@ As a uniform list of suitable hostnames was not readily available, several publi
 
 4. **List from [How India Censors the Web](https://github.com/kush789/How-India-Censors-The-Web-Data/blob/master/potentially_blocked_unique_hostnames.txt)**
 
-The processes used for extracting first level domains were not ideal and a small portion of hostnames were omitted from the compiled list as a result.
+The method used for extracting first level domains was not ideal, due to which a small portion of hostnames were omitted from the compiled test list. 
 
-### Results
+## Results
 
 A current list of blocked hostnames can be found [here](https://github.com/qurbat/act-censorship/blob/main/compiled_block_list.txt). Historic results are available in the `output` directory.
 
