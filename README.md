@@ -30,11 +30,12 @@ The processes used for extracting first level domains were not ideal and a small
 
 A current list of blocked hostnames can be found [here](https://github.com/qurbat/act-censorship/blob/main/compiled_block_list.txt). Historic results are available in the `output` directory.
 
-| date of test   | total hosts  | removed since last test    | added since last test            |
-|----------------|--------------|----------------------------|----------------------------------|
-| March 28, 2021 | 3593         | N/A                        | N/A                              |
-| April 13, 2021 | 3419         | 179 hosts removed          | 0 hosts added                    |
-|                |              |                            |                                  |
+| date of test   | total hosts  | removed since last test    | added since last test            | comments             |
+|----------------|--------------|----------------------------|----------------------------------|----------------------|
+| March 28, 2021 | 3593         | N/A                        | N/A                              | N/A                  |
+| April 13, 2021 | 3419         | 179 hosts removed          | 0 hosts added                    | pruning              |
+| April 16, 2021 | 3495         | 0 hosts removed            | 76 hosts added                   | citizenlab test list |
+|                |              |                            |                                  |                      |
 
 **Note:** The lists published here are not meant to be fully representative of all of the hostnames that might be blocked by ACT Fibernet at a given time.
 
@@ -52,7 +53,7 @@ If you intend to run the script using the network of an Internet service provide
 [MassDNS](https://github.com/blechschmidt/massdns) can be used to query a sizeable number of hostnames with speed. The responses from these DNS queries can then be used to extraploate blocked hosts.
 
 ```
-./massdns -r resource/resolver.txt -s 10000 -t A <input_domain_list.txt> output/massdns_query_results.txt
+./massdns -r resources/resolver.txt -s 10000 -t A <input_domain_list.txt> output/massdns_query_results.txt
 cat output/massdns_query_results.txt | grep "<POISONED_A_RECORD_IP>" > results.txt
 ```
 
