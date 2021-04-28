@@ -24,6 +24,8 @@ As a uniform list of suitable hostnames was not readily available, several publi
 
 4. **List from [How India Censors the Web](https://github.com/kush789/How-India-Censors-The-Web-Data/blob/master/potentially_blocked_unique_hostnames.txt)**
 
+5. **List from Citizen Lab's [reposistory](https://github.com/citizenlab/test-lists)**
+
 The method used for extracting first level domains was not ideal, due to which a small portion of hostnames were omitted from the compiled test list. 
 
 ## Results
