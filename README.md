@@ -37,6 +37,7 @@ A current list of blocked hostnames can be found [here](https://github.com/qurba
 | March 28, 2021 | 3593         | N/A                        | N/A                              | N/A                  |
 | April 13, 2021 | 3419         | 179 hosts removed          | 0 hosts added                    | pruning              |
 | April 16, 2021 | 3495         | 0 hosts removed            | 76 hosts added                   | citizenlab test list |
+| June 8, 2021   | 4050         | 0 hosts removed            | 555 hosts added                  | N/A                  |
 |                |              |                            |                                  |                      |
 
 **Note:** The lists published here are not meant to be fully representative of all of the hostnames that might be blocked by ACT Fibernet at a given time.
