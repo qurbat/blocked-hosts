@@ -1,6 +1,18 @@
 # act-censorship
 This repository houses periodically updated lists of websites (first level domains only) known to be blocked on ACT Fibernet's network.
 
+A current list of blocked hostnames can be found [here](https://github.com/qurbat/act-censorship/blob/main/compiled_block_list.txt). Historic results are available in the `output` directory.
+
+| date of test   | total hosts  | removed since last test    | added since last test            | comments             |
+|----------------|--------------|----------------------------|----------------------------------|----------------------|
+| March 28, 2021 | 3593         | N/A                        | N/A                              | N/A                  |
+| April 13, 2021 | 3419         | 179 hosts removed          | 0 hosts added                    | pruning              |
+| April 16, 2021 | 3495         | 0 hosts removed            | 76 hosts added                   | citizenlab test list |
+| June 8, 2021   | 4050         | 0 hosts removed            | 555 hosts added                  | N/A                  |
+|                |              |                            |                                  |                      |
+
+**Note:** The lists published here are not meant to be fully representative of all hostnames that might be blocked by ACT Fibernet at a given time.
+
 ## Methodology
 One of the web censorship techniques employed by ACT Fibernet is that of poisoning the DNS `A record` entry for each root domain present on their block list.
 
@@ -27,20 +39,6 @@ As a uniform list of suitable hostnames was not readily available, several publi
 5. **List from Citizen Lab's [reposistory](https://github.com/citizenlab/test-lists)**
 
 The method used for extracting first level domains was not ideal, due to which a small portion of hostnames were omitted from the compiled test list. 
-
-## Results
-
-A current list of blocked hostnames can be found [here](https://github.com/qurbat/act-censorship/blob/main/compiled_block_list.txt). Historic results are available in the `output` directory.
-
-| date of test   | total hosts  | removed since last test    | added since last test            | comments             |
-|----------------|--------------|----------------------------|----------------------------------|----------------------|
-| March 28, 2021 | 3593         | N/A                        | N/A                              | N/A                  |
-| April 13, 2021 | 3419         | 179 hosts removed          | 0 hosts added                    | pruning              |
-| April 16, 2021 | 3495         | 0 hosts removed            | 76 hosts added                   | citizenlab test list |
-| June 8, 2021   | 4050         | 0 hosts removed            | 555 hosts added                  | N/A                  |
-|                |              |                            |                                  |                      |
-
-**Note:** The lists published here are not meant to be fully representative of all of the hostnames that might be blocked by ACT Fibernet at a given time.
 
 ## Reproducibility
 
