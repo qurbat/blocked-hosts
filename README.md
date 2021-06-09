@@ -50,7 +50,6 @@ ACT Fibernet users can verify a list of blocked hostnames by using the `blocktes
 
 If you intend to run the script using the network of an Internet service provider other than ACT Fibernet, you will have to modify the expected response for identifying a blocked host on [line 16](https://github.com/qurbat/act-censorship/blob/main/blocktest.sh#L16) accordingly.
 
-### MassDNS
 [MassDNS](https://github.com/blechschmidt/massdns) can be used to query a sizeable number of hostnames with speed. The responses from these DNS queries can then be used to extraploate blocked hosts.
 
 ```
