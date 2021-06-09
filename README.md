@@ -3,6 +3,8 @@ This repository houses periodically updated lists of websites (first level domai
 
 A current list of blocked hostnames can be found [here](https://github.com/qurbat/act-censorship/blob/main/compiled_block_list.txt). Historic results are available in the `output` directory.
 
+**Note:** The lists published here are not meant to be fully representative of all hostnames that might be blocked by ACT Fibernet at a given time.
+
 | date of test   | total hosts  | removed since last test    | added since last test            | comments             |
 |----------------|--------------|----------------------------|----------------------------------|----------------------|
 | March 28, 2021 | 3593         | N/A                        | N/A                              | N/A                  |
@@ -11,9 +13,7 @@ A current list of blocked hostnames can be found [here](https://github.com/qurba
 | June 8, 2021   | 4050         | 0 hosts removed            | 555 hosts added                  | N/A                  |
 |                |              |                            |                                  |                      |
 
-**Note:** The lists published here are not meant to be fully representative of all hostnames that might be blocked by ACT Fibernet at a given time.
-
-As a uniform list of suitable hostnames was not readily available, several publicly available domain name lists were collated and used as input. The collated list was further modified to exclude subdomains and duplicate entries.
+As a uniform list of suitable hostnames were not readily available, several publicly available domain name lists were collated and used as input. The collated list was further modified to exclude subdomains and duplicate entries.
 
 1. **Top 1 million from [Alexa](http://s3.amazonaws.com/alexa-static/top-1m.csv.zip)**
 
