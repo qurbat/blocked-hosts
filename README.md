@@ -13,19 +13,6 @@ A current list of blocked hostnames can be found [here](https://github.com/qurba
 
 **Note:** The lists published here are not meant to be fully representative of all hostnames that might be blocked by ACT Fibernet at a given time.
 
-## Methodology
-One of the web censorship techniques employed by ACT Fibernet is that of poisoning the DNS `A record` entry for each root domain present on their block list.
-
-```
-tencent.com. 0 IN A 202.83.21.14
-qq.com. 0 IN A 202.83.21.14
-ucweb.com. 0 IN A 202.83.21.14
-```
-
-The poisoned entry appears to consistently point toward a single IP address for a period of at least a few weeks. This characteristic enables fingerprinting of blocked hostnames, and is useful when querying a large list of hostnames in order to deduce a proportionate list of blocked hostnames.
-
-## Data
-
 As a uniform list of suitable hostnames was not readily available, several publicly available domain name lists were collated and used as input. The collated list was further modified to exclude subdomains and duplicate entries.
 
 1. **Top 1 million from [Alexa](http://s3.amazonaws.com/alexa-static/top-1m.csv.zip)**
@@ -38,7 +25,18 @@ As a uniform list of suitable hostnames was not readily available, several publi
 
 5. **List from Citizen Lab's [reposistory](https://github.com/citizenlab/test-lists)**
 
-The method used for extracting first level domains was not ideal, due to which a small portion of hostnames were omitted from the compiled test list. 
+The method used for extracting first level domains was not ideal, due to which a small portion of hostnames were omitted from the compiled input list. 
+
+## Methodology
+One of the web censorship techniques employed by ACT Fibernet is that of poisoning the DNS `A record` entry for each root domain present on their block list.
+
+```
+tencent.com. 0 IN A 202.83.21.14
+qq.com. 0 IN A 202.83.21.14
+ucweb.com. 0 IN A 202.83.21.14
+```
+
+The poisoned entry appears to consistently point toward a single IP address for a period of at least a few weeks. This characteristic enables fingerprinting of blocked hostnames, and is useful when querying a large list of hostnames in order to deduce a proportionate list of blocked hostnames.
 
 ## Reproducibility
 
