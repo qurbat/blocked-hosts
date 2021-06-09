@@ -13,6 +13,8 @@ A current list of blocked hostnames can be found [here](https://github.com/qurba
 | June 8, 2021   | 4050         | 0 hosts removed            | 555 hosts added                  | N/A                  |
 |                |              |                            |                                  |                      |
 
+## Data
+
 As a uniform list of suitable hostnames were not readily available, several publicly available domain name lists were collated and used as input. The collated list was further modified to exclude subdomains and duplicate entries.
 
 1. **Top 1 million from [Alexa](http://s3.amazonaws.com/alexa-static/top-1m.csv.zip)**
