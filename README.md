@@ -7,6 +7,7 @@ A current list of blocked hostnames can be found [here](https://github.com/qurba
 
 | date of test   | total hosts  | removed since last test    | added since last test            | comments             |
 |----------------|--------------|----------------------------|----------------------------------|----------------------|
+| July 27, 2021  | 4083         | -                          | 33 hosts added                   | re-test              |
 | June 8, 2021   | 4050         | -                          | 555 hosts added                  | top 10m list re-test |
 | April 16, 2021 | 3495         | -                          | 76 hosts added                   | citizenlab test list |
 | April 13, 2021 | 3419         | 179 hosts removed          | -                                | rm unblocked hosts   |
