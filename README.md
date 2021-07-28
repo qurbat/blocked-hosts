@@ -1,4 +1,3 @@
-# blocked-hosts
 This repository houses periodically updated lists of websites (first level domains only) known to be blocked on ACT Fibernet's network.
 
 A current list of blocked hostnames can be found [here](https://github.com/qurbat/act-censorship/blob/main/compiled_block_list.txt). Historic results are available in the `output` directory.
