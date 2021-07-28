@@ -1,4 +1,4 @@
-# act-censorship
+# blocked-hosts
 This repository houses periodically updated lists of websites (first level domains only) known to be blocked on ACT Fibernet's network.
 
 A current list of blocked hostnames can be found [here](https://github.com/qurbat/act-censorship/blob/main/compiled_block_list.txt). Historic results are available in the `output` directory.
@@ -7,6 +7,7 @@ A current list of blocked hostnames can be found [here](https://github.com/qurba
 
 | date of test   | total hosts  | removed since last test    | added since last test            |
 |----------------|--------------|----------------------------|----------------------------------|
+| July 28, 2021  | 4281         | -                          | 198 hosts added                  |
 | July 27, 2021  | 4083         | -                          | 33 hosts added                   |
 | June 8, 2021   | 4050         | -                          | 555 hosts added                  |
 | April 16, 2021 | 3495         | -                          | 76 hosts added                   |
