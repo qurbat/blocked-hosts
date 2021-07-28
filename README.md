@@ -1,4 +1,7 @@
 # blocked-hosts
+[![Statistics](https://img.shields.io/badge/sites-4,281-brightgreen)](https://github.com/qurbat/blocked-hosts)
+![GitHub last commit](https://img.shields.io/github/last-commit/qurbat/blocked-hosts?color=blue)
+
 This repository houses a periodically updated list of websites (root domains only) that are decidedly known to be blocked on ACT Fibernet's network. A current list of blocked hostnames can be found [here](https://github.com/qurbat/blocked-hosts/blob/main/compiled_block_list.txt). Historic results are available in the `output` directory.
 
 **Note:** The lists published here are not fully representative of all hostnames that might be blocked by ACT Fibernet at a given time.
