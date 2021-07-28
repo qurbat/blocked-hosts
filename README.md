@@ -54,7 +54,7 @@ If you intend to run the script using the network of an Internet service provide
 [MassDNS](https://github.com/blechschmidt/massdns) can be used to query a sizeable number of hostnames with speed. The responses from these DNS queries can then be used to extraploate blocked hosts.
 
 ```
-./massdns -r resources/resolver.txt -s 10000 -t A <input_domain_list.txt> output/massdns_query_results.txt
+./massdns -r resources/resolver.txt -s 500 -t A input.txt > output.txt
 cat output/massdns_query_results.txt | grep "<POISONED_A_RECORD_IP>" > results.txt
 ```
 
