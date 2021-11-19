@@ -1,20 +1,21 @@
 # blocked-hosts
-[![Statistics](https://img.shields.io/badge/sites-4,281-brightgreen)](https://github.com/qurbat/blocked-hosts)
+[![Statistics](https://img.shields.io/badge/sites-4,476-brightgreen)](https://github.com/qurbat/blocked-hosts)
 ![GitHub last commit](https://img.shields.io/github/last-commit/qurbat/blocked-hosts?color=blue)
 
 This repository houses a periodically updated list of websites (root domains only) that are decidedly known to be blocked on ACT Fibernet's network. A current list of blocked hostnames can be found [here](https://github.com/qurbat/blocked-hosts/blob/main/compiled_block_list.txt). Historic results are available in the `output` directory.
 
 **Note:** The lists published here are not fully representative of all hostnames that might be blocked by ACT Fibernet at a given time.
 
-| date of test   | total hosts  | removed since last test    | added since last test            |
-|----------------|--------------|----------------------------|----------------------------------|
-| July 28, 2021  | 4281         | -                          | 198 hosts added                  |
-| July 27, 2021  | 4083         | -                          | 33 hosts added                   |
-| June 8, 2021   | 4050         | -                          | 555 hosts added                  |
-| April 16, 2021 | 3495         | -                          | 76 hosts added                   |
-| April 13, 2021 | 3419         | 179 hosts removed          | -                                |
-| March 28, 2021 | 3593         | -                          | 3593 hosts added                 |
-|                |              |                            |                                  |
+| date of test      | total hosts  | removed since last test    | added since last test            |
+|-------------------|--------------|----------------------------|----------------------------------|
+| November 13, 2021 | 4476         | -                          | 195 hosts added                  |
+| July 28, 2021     | 4281         | -                          | 198 hosts added                  |
+| July 27, 2021     | 4083         | -                          | 33 hosts added                   |
+| June 8, 2021      | 4050         | -                          | 555 hosts added                  |
+| April 16, 2021    | 3495         | -                          | 76 hosts added                   |
+| April 13, 2021    | 3419         | 179 hosts removed          | -                                |
+| March 28, 2021    | 3593         | -                          | 3593 hosts added                 |
+|                   |              |                            |                                  |
 
 ## Data
 
