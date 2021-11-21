@@ -2,7 +2,7 @@
 [![Statistics](https://img.shields.io/badge/sites-4,609-brightgreen)](https://github.com/qurbat/blocked-hosts)
 ![GitHub last commit](https://img.shields.io/github/last-commit/qurbat/blocked-hosts?color=blue)
 
-This repository houses a periodically updated list of websites (root domains only) that are decidedly known to be blocked on ACT Fibernet's network. A current list of blocked hostnames can be found [here](https://github.com/qurbat/blocked-hosts/blob/main/compiled_block_list.txt). Historic results are available in the `output` directory.
+This repository houses a periodically updated list of websites (first-level domains only) that are known to be blocked on ACT Fibernet's network. A current list of blocked hostnames can be found [here](https://github.com/qurbat/blocked-hosts/blob/main/compiled_block_list.txt). Historic results are available in the `output` directory.
 
 **Note:** The lists published here are not fully representative of all hostnames that might be blocked by ACT Fibernet at a given time.
 
@@ -43,7 +43,7 @@ qq.com. 0 IN A 202.83.21.14
 ucweb.com. 0 IN A 202.83.21.14
 ```
 
-The poisoned entry appears to consistently point toward a single IP address for a period of at least a few weeks. This characteristic enables fingerprinting of blocked hostnames, and is useful when querying a large list of hostnames in order to deduce a proportionate list of blocked hostnames.
+The poisoned entries appear to consistently point to a single IP address for a period of at least a few weeks. This characteristic enables fingerprinting of blocked hostnames, and is used for querying a large list of hostnames in order to deduce a proportionate list of blocked hostnames.
 
 ## Reproducibility
 
@@ -64,6 +64,4 @@ cat output/massdns_query_results.txt | grep "<POISONED_A_RECORD_IP>" > results.t
 
 ## Notes
 
-This repository was inspired by the paper [How India Censors the Web](https://arxiv.org/abs/1912.08590) authored by Kushagra Singh, Gurshabad Grover, and Varun Bansal. The primary intention behind this repository is to introduce some amount of transparency to the otherwise opaque processes associated with web censorship in India.
-
-It is hoped that this data will be useful to those researching the scale and impact of web censorship in India.
+This repository builds on the paper [How India Censors the Web](https://arxiv.org/abs/1912.08590) authored by Kushagra Singh, Gurshabad Grover, and Varun Bansal. The primary intention behind this repository is to introduce some amount of transparency to the otherwise opaque processes associated with web censorship in India
