@@ -6,7 +6,7 @@ This repository houses a periodically updated list of websites (first-level doma
 
 **Note:** The lists published here are not fully representative of all hostnames that might be blocked by ACT Fibernet at a given time.
 
-|date of test       | total hosts  | removed since last test    | added since last test            |
+| date of test      | total hosts  | removed since last test    | added since last test            |
 |-------------------|--------------|----------------------------|----------------------------------|
 | November 21, 2021 | 4732         | 1 host removed             | 452 hosts added                  |
 | July 28, 2021     | 4281         | -                          | 231 hosts added                  |
