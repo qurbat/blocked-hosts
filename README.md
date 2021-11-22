@@ -11,8 +11,7 @@ This repository houses a periodically updated list of websites (first-level doma
 | November 21, 2021 | 4732         | 1 host removed             | 452 hosts added                  |
 | July 28, 2021     | 4281         | -                          | 231 hosts added                  |
 | June 8, 2021      | 4050         | -                          | 555 hosts added                  |
-| April 16, 2021    | 3495         | -                          | 76 hosts added                   |
-| April 13, 2021    | 3419         | 179 hosts removed          | -                                |
+| April 16, 2021    | 3495         | 179 hosts removed          | 76 hosts added                   |
 | March 28, 2021    | 3593         | -                          | 3593 hosts added                 |
 |                   |              |                            |                                  |
 
