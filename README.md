@@ -8,11 +8,12 @@ This repository houses a periodically updated list of websites (first-level doma
 
 | date of test      | total hosts  | removed since last test    | added since last test            |
 |-------------------|--------------|----------------------------|----------------------------------|
-| November 22, 2021 | 5,456         | 1 host removed            | 1176 hosts added                  |
-| July 28, 2021     | 4,281         | -                         | 231 hosts added                  |
-| June 8, 2021      | 4,050         | -                         | 555 hosts added                  |
-| April 16, 2021    | 3,495         | 179 hosts removed         | 76 hosts added                   |
-| March 28, 2021    | 3,593         | -                         | 3593 hosts added                 |
+| May 26, 2022      | 5,402        | 87 hosts removed          | 33 hosts added                    |
+| November 22, 2021 | 5,456        | 1 host removed            | 1176 hosts added                  |
+| July 28, 2021     | 4,281        | -                         | 231 hosts added                   |
+| June 8, 2021      | 4,050        | -                         | 555 hosts added                   |
+| April 16, 2021    | 3,495        | 179 hosts removed         | 76 hosts added                    |
+| March 28, 2021    | 3,593        | -                         | 3593 hosts added                  |
 
 ## Data
 
@@ -43,7 +44,7 @@ The poisoned entries appear to consistently point to a single IP address for a p
 
 ## Reproducibility
 
-ACT Fibernet users can verify a list of blocked hostnames by using the `blocktest.sh` script provided in this repository. The script expects a response of `IN A 202.83.21.14` to identify a blocked host.
+ACT Fibernet users can verify a list of blocked hostnames by using the `blocktest.sh` script provided in this repository. The script provided in the repository expects a response of `IN A 202.83.21.14` to identify a blocked host.
 
 ```
 ./blocktest.sh output/<list.txt>
