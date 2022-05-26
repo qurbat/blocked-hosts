@@ -46,7 +46,7 @@ The poisoned entries appear to consistently point to a single IP address for a p
 ACT Fibernet users can verify a list of blocked hostnames by using the `blocktest.sh` script provided in this repository. The script expects a response of `IN A 202.83.21.14` to identify a blocked host.
 
 ```
-./blocktest.sh compiled_block_list.txt
+./blocktest.sh output/<list.txt>
 ```
 
 If you intend to run the script using the network of an Internet service provider other than ACT Fibernet, you will have to modify the expected response for identifying a blocked host on [line 16](https://github.com/qurbat/act-censorship/blob/main/blocktest.sh#L16) accordingly.
