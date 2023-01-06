@@ -1,0 +1,5 @@
+# This file contains a list of IP addresses used by ACT for DNS hijacking.
+# 49.205.171.200 was in use until March 2021.
+# 202.83.21.14 has been in use since April 2021.
+# ~ = ~
+202.83.21.14
