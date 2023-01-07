@@ -4,7 +4,7 @@
 
 This repository houses a periodically updated list of websites (first-level domains only) that are known to be blocked on ACT Fibernet's network. A current list of blocked hostnames can be found [here](https://github.com/qurbat/blocked-hosts/blob/main/compiled_block_list.txt). Historic results are available in the `output` directory.
 
-**Note:** The lists published here are not fully representative of all hostnames that might be blocked by ACT Fibernet at a given time.
+**Note:** The list(s) published here are not fully representative of all hostnames that might be blocked by ACT Fibernet at a given time.
 
 | date of test      | total hosts  | removed since last test    | added since last test            |
 |-------------------|--------------|----------------------------|----------------------------------|
@@ -30,7 +30,9 @@ As a uniform list of suitable hostnames was not readily available, several publi
 
 5. **List from Citizen Lab's [reposistory](https://github.com/citizenlab/test-lists)**
 
-The method used for extracting first level domains was not ideal, due to which a small portion of hostnames were omitted from the compiled input list. 
+The method used for extracting first level domains was not ideal, due to which a small portion of hostnames were omitted from the compiled input list.
+
+**NOTE:** Input files for an Internet-wide survey of blocked hosts will soon be made available. An issue for this exists [here.](https://github.com/qurbat/blocked-hosts/issues/5) 
 
 ## Methodology
 One of the web censorship techniques employed by ACT Fibernet is that of poisoning the DNS `A record` entry for each root domain present on their block list.
