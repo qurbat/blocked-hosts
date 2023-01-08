@@ -42,7 +42,7 @@ As a uniform list of suitable hostnames was not readily available, several publi
 5. **List from Citizen Lab's [reposistory](https://github.com/citizenlab/test-lists)**
 
 ## Installation
-The `install.sh` script can be used to install the `tldextract` package using `pip`, and to download, compile, and install the `massdns` binary from source. `python3` is required.
+The `install.sh` script can be used to install the `tldextract` package using `pip`, and to download, compile, and install the `massdns` binary from source. `python3` is required to already be installed on your system.
 
 ## Usage
 
