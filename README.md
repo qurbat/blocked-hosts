@@ -16,6 +16,17 @@ This repository houses a periodically updated list of websites (first-level doma
 | April 16, 2021    | 3,495        | 179 hosts removed          | 76 hosts added                   |
 | March 28, 2021    | 3,593        | -                          | 3593 hosts added                 |
 
+## Method
+The primary web censorship technique employed by ACT Fibernet is of poisoning the DNS `A record` entry for the root domain of a blocked host.
+
+```
+tencent.com. 0 IN A 202.83.21.14
+qq.com. 0 IN A 202.83.21.14
+ucweb.com. 0 IN A 202.83.21.14
+```
+
+The poisoned `A record` entry has been documented to consistently point to only a few IP addresses. This characteristic enables fingerprinting of blocked hostnames.
+
 ## Data
 
 As a uniform list of suitable hostnames was not readily available, several publicly available domain name lists were collated and used as input. The collated list was further modified to exclude subdomains and duplicate entries.
@@ -30,18 +41,7 @@ As a uniform list of suitable hostnames was not readily available, several publi
 
 5. **List from Citizen Lab's [reposistory](https://github.com/citizenlab/test-lists)**
 
-## Methodology
-One of the web censorship techniques employed by ACT Fibernet is that of poisoning the DNS `A record` entry for the root domain of a blocked host.
-
-```
-tencent.com. 0 IN A 202.83.21.14
-qq.com. 0 IN A 202.83.21.14
-ucweb.com. 0 IN A 202.83.21.14
-```
-
-The poisoned `A record` entry has been documented to consistently point to only a few IP addresses. This characteristic enables fingerprinting of blocked hostnames with ease.
-
-## Installation
+## Install
 - `python3`
 - `tldextract` package for `python3`
 - `massdns` binary
@@ -54,12 +54,12 @@ The `install.sh` script can be used to install the `tldextract` package using `p
 ./run.sh <input_list.txt>
 ```
 
-If you intend to run the script using the network of an Internet service provider other than ACT Fibernet, you will have to modify the variable defined on [line 4](https://github.com/qurbat/act-censorship/blob/main/run.sh#L4) for identifying a blocked host. The `run.sh` script makes use of [massdns](https://github.com/blechschmidt/massdns) to query a sizeable number of hostnames with speed, the responses of which are used for extraploating blocked host names. The `apex.py` script extracts root-level host names from the results with the help of the `tldextract` package. The list of root-level host names is then de-duplicated and saved to disk.
+If you intend to run the script using the network of an Internet service provider other than ACT Fibernet, you will have to modify the variable defined on [line 4](https://github.com/qurbat/act-censorship/blob/main/run.sh#L4) for identifying a blocked host. The `run.sh` script makes use of [massdns](https://github.com/blechschmidt/massdns) to query a sizeable number of hostnames with speed, the responses of which are used for extraploating blocked hostnames. The `apex.py` script extracts root-level hostnames from the results with the help of the `tldextract` package. The list of root-level hostnames is then de-duplicated and saved to disk.
 
-## Reproducibility
-The `test.sh` script can be used to verify the latest provided block list. This script guarantees accuracy over speed and is not bandwidth intensive.
+## Verify
+The `test.sh` script can be used to verify the latest provided block list. This script guarantees accuracy over speed and is not bandwidth intensive, unlike `run.sh`.
 
 ## Notes
 This repository builds on the paper [How India Censors the Web](https://arxiv.org/abs/1912.08590) authored by Kushagra Singh, Gurshabad Grover, and Varun Bansal. The primary intention behind this repository is to introduce some amount of transparency to the otherwise opaque processes associated with web censorship in India.
 
-The [captn3m0/airtel-blocked-hosts](https://github.com/captn3m0/airtel-blocked-hosts) repository provides a similar list for hostnames blocked on the Airtel Broadband network.
+The [captn3m0/airtel-blocked-hosts](https://github.com/captn3m0/airtel-blocked-hosts) repository provides a similar list of hostnames known to be blocked on the Airtel Broadband network.
