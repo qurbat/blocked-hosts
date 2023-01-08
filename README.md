@@ -50,11 +50,7 @@ The poisoned `A record` entry has been documented to consistently point to only 
 - `tldextract` package for `python3`
 - `massdns` binary
 
-The `install.sh` script can be used to install the `tldextract` package using `pip`. The script will also download, compile, and install the `massdns` binary from source.
-
-```
-./install.sh
-```
+The `install.sh` script can be used to install the `tldextract` package using `pip`, and to download, compile, and install the `massdns` binary from source.
 
 ## Usage
 
