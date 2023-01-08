@@ -30,10 +30,6 @@ As a uniform list of suitable hostnames was not readily available, several publi
 
 5. **List from Citizen Lab's [reposistory](https://github.com/citizenlab/test-lists)**
 
-The method used for extracting first level domains was not ideal, due to which a small portion of hostnames were omitted from the compiled input list.
-
-**Note:**  Input files for an Internet-wide survey of blocked hosts will soon be made available. An issue for this exists [here.](https://github.com/qurbat/blocked-hosts/issues/5) 
-
 ## Methodology
 One of the web censorship techniques employed by ACT Fibernet is that of poisoning the DNS `A record` entry for the root domain of a blocked host.
 
