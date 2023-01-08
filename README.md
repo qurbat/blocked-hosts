@@ -25,7 +25,7 @@ qq.com. 0 IN A 202.83.21.14
 ucweb.com. 0 IN A 202.83.21.14
 ```
 
-The poisoned `A record` entry has been documented to consistently point to only a few IP addresses. This characteristic enables fingerprinting of blocked hostnames.
+The poisoned `A record` entry has been documented to consistently point to only a few IP addresses. This characteristic enables fingerprinting blocked hostnames.
 
 ## Data
 
