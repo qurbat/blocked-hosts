@@ -52,7 +52,9 @@ The `install.sh` script can be used to install the `tldextract` package using `p
 ./run.sh <input_list.txt>
 ```
 
-If you intend to run the script using the network of an Internet service provider other than ACT Fibernet, you will have to modify the variable defined on [line 4](https://github.com/qurbat/act-censorship/blob/main/run.sh#L4) for identifying a blocked host. The `run.sh` script makes use of [massdns](https://github.com/blechschmidt/massdns) to query a sizeable number of hostnames with speed, the responses of which are used for extraploating blocked hostnames. The `apex.py` script extracts root-level hostnames from the results with the help of the `tldextract` package. The list of root-level hostnames is then de-duplicated and saved to disk.
+If you intend to run the script using the network of an Internet service provider other than ACT Fibernet, you will have to modify the variable defined on [line 4](https://github.com/qurbat/act-censorship/blob/main/run.sh#L4) for identifying a blocked host.
+
+The `run.sh` script makes use of [massdns](https://github.com/blechschmidt/massdns) to query a sizeable number of hostnames with speed, the responses of which are used for extraploating blocked hostnames. The `apex.py` script extracts root-level hostnames from the results with the help of the `tldextract` package. The list of root-level hostnames is then de-duplicated and saved to disk.
 
 ## Verify
 The `test.sh` script can be used to verify the latest provided block list. This script guarantees accuracy over speed and is not bandwidth intensive, unlike `run.sh`.
