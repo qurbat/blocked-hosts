@@ -2,7 +2,7 @@
 [![Statistics](https://img.shields.io/badge/sites-5,530-brightgreen)](https://github.com/qurbat/blocked-hosts)
 ![GitHub last commit](https://img.shields.io/github/last-commit/qurbat/blocked-hosts?color=blue)
 
-This repository houses a periodically updated list of websites (first-level domains only) that are known to be blocked on ACT Fibernet's network. A current list of blocked hostnames can be found [here](https://github.com/qurbat/blocked-hosts/blob/main/compiled_block_list.txt). Historic results are available in the `output` directory.
+This repository houses a periodically updated list of websites (first-level domains only) that are known to be blocked on the ACT Fibernet network. A current list of blocked hostnames can be found [here](https://github.com/qurbat/blocked-hosts/blob/main/compiled_block_list.txt). Historic results are available in the `output` directory.
 
 **Note:** The list(s) published here are not fully representative of all hostnames that might be blocked by ACT Fibernet at a given time.
 
@@ -32,10 +32,10 @@ As a uniform list of suitable hostnames was not readily available, several publi
 
 The method used for extracting first level domains was not ideal, due to which a small portion of hostnames were omitted from the compiled input list.
 
-**NOTE:** Input files for an Internet-wide survey of blocked hosts will soon be made available. An issue for this exists [here.](https://github.com/qurbat/blocked-hosts/issues/5) 
+**Note:**  Input files for an Internet-wide survey of blocked hosts will soon be made available. An issue for this exists [here.](https://github.com/qurbat/blocked-hosts/issues/5) 
 
 ## Methodology
-One of the web censorship techniques employed by ACT Fibernet is that of poisoning the DNS `A record` entry for each root domain present on their block list.
+One of the web censorship techniques employed by ACT Fibernet is that of poisoning the DNS `A record` entry for the root domain of a blocked host.
 
 ```
 tencent.com. 0 IN A 202.83.21.14
@@ -43,25 +43,30 @@ qq.com. 0 IN A 202.83.21.14
 ucweb.com. 0 IN A 202.83.21.14
 ```
 
-The poisoned entries appear to consistently point to a single IP address for a period of at least a few weeks. This characteristic enables fingerprinting of blocked hostnames, and is used for querying a large list of hostnames in order to deduce a proportionate list of blocked hostnames.
+The poisoned `A record` entry has been documented to consistently point to only a few IP addresses. This characteristic enables fingerprinting of blocked hostnames with ease.
 
-## Reproducibility
+## Installation
+- `python3`
+- `tldextract` package for `python3`
+- `massdns` binary
 
-ACT Fibernet users can verify a list of blocked hostnames by using the `blocktest.sh` script provided in this repository. The script provided in the repository expects a response of `IN A 202.83.21.14` to identify a blocked host.
-
-```
-./blocktest.sh output/<list.txt>
-```
-
-If you intend to run the script using the network of an Internet service provider other than ACT Fibernet, you will have to modify the expected response for identifying a blocked host on [line 16](https://github.com/qurbat/act-censorship/blob/main/blocktest.sh#L16) accordingly.
-
-[MassDNS](https://github.com/blechschmidt/massdns) can be used to query a sizeable number of hostnames with speed. The responses from these DNS queries can then be used to extraploate blocked hosts.
+The `install.sh` script can be used to install the `tldextract` package using `pip`. The script will also download, compile, and install the `massdns` binary from source.
 
 ```
-./massdns -r resources/resolver.txt -s 500 -t A input.txt > output.txt
-cat output/massdns_query_results.txt | grep "<POISONED_A_RECORD_IP>" > results.txt
+./install.sh
 ```
+
+## Usage
+
+```
+./run.sh <input_list.txt>
+```
+
+If you intend to run the script using the network of an Internet service provider other than ACT Fibernet, you will have to modify the variable defined on [line 4](https://github.com/qurbat/act-censorship/blob/main/run.sh#L4) for identifying a blocked host.
+
+The script makes use of [massdns](https://github.com/blechschmidt/massdns) to query a sizeable number of hostnames with speed. The responses from these DNS queries are used to extraploate blocked hosts. Finally, the apex domain names are extracted, and de-duplication of the output is performed at the very end.
 
 ## Notes
+This repository builds on the paper [How India Censors the Web](https://arxiv.org/abs/1912.08590) authored by Kushagra Singh, Gurshabad Grover, and Varun Bansal. The primary intention behind this repository is to introduce some amount of transparency to the otherwise opaque processes associated with web censorship in India.
 
-This repository builds on the paper [How India Censors the Web](https://arxiv.org/abs/1912.08590) authored by Kushagra Singh, Gurshabad Grover, and Varun Bansal. The primary intention behind this repository is to introduce some amount of transparency to the otherwise opaque processes associated with web censorship in India
+The captn3m0/airtel-blocked-hosts repository provides a similar list for hostnames blocked on the Airtel Broadband network.
