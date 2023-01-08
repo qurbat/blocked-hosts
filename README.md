@@ -56,7 +56,7 @@ If you intend to run the script using the network of an Internet service provide
 
 The `run.sh` script makes use of [massdns](https://github.com/blechschmidt/massdns) to query a sizeable number of hostnames with speed, the responses of which are used for extraploating blocked hostnames. The `apex.py` script extracts root-level hostnames from the results with the help of the `tldextract` package. The list of root-level hostnames is then de-duplicated and saved to disk.
 
-## Verify
+## Verification
 The `test.sh` script can be used to verify the latest provided block list. This script guarantees accuracy over speed and is not bandwidth intensive, unlike `run.sh`.
 
 ## Notes
