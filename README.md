@@ -62,11 +62,12 @@ The `install.sh` script can be used to install the `tldextract` package using `p
 ./run.sh <input_list.txt>
 ```
 
-If you intend to run the script using the network of an Internet service provider other than ACT Fibernet, you will have to modify the variable defined on [line 4](https://github.com/qurbat/act-censorship/blob/main/run.sh#L4) for identifying a blocked host.
+If you intend to run the script using the network of an Internet service provider other than ACT Fibernet, you will have to modify the variable defined on [line 4](https://github.com/qurbat/act-censorship/blob/main/run.sh#L4) for identifying a blocked host. The `run.sh` script makes use of [massdns](https://github.com/blechschmidt/massdns) to query a sizeable number of hostnames with speed, the responses of which are used for extraploating blocked host names. The `apex.py` script extracts root-level host names from the results with the help of the `tldextract` package. The list of root-level host names is then de-duplicated and saved to disk.
 
-The script makes use of [massdns](https://github.com/blechschmidt/massdns) to query a sizeable number of hostnames with speed. The responses from these DNS queries are used to extraploate blocked hosts. Finally, the apex domain names are extracted, and de-duplication of the output is performed at the very end.
+## Reproducibility
+The `test.sh` script can be used to verify the latest provided block list. `test.sh` guarantees accuracy over speed. 
 
 ## Notes
 This repository builds on the paper [How India Censors the Web](https://arxiv.org/abs/1912.08590) authored by Kushagra Singh, Gurshabad Grover, and Varun Bansal. The primary intention behind this repository is to introduce some amount of transparency to the otherwise opaque processes associated with web censorship in India.
 
-The captn3m0/airtel-blocked-hosts repository provides a similar list for hostnames blocked on the Airtel Broadband network.
+The [captn3m0/airtel-blocked-hosts](https://github.com/captn3m0/airtel-blocked-hosts) repository provides a similar list for hostnames blocked on the Airtel Broadband network.
