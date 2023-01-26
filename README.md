@@ -8,7 +8,7 @@ This repository houses a periodically updated list of websites (first-level doma
 
 | date of test      | total hosts  | removed since last test    | added since last test            |
 |-------------------|--------------|----------------------------|----------------------------------|
-| January 26, 2023  | 5,434        | 96 hosts removed           |                                  |
+| January 26, 2023  | 5,434        | 96 hosts removed           | -                                |
 | January 7, 2023   | 5,530        | -                          | 128 hosts added                  |
 | May 26, 2022      | 5,402        | 87 hosts removed           | 33 hosts added                   |
 | November 22, 2021 | 5,456        | 1 host removed             | 1176 hosts added                 |
