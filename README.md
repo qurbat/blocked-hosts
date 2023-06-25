@@ -1,14 +1,15 @@
 # blocked-hosts
-[![Statistics](https://img.shields.io/badge/sites-5,981-brightgreen)](https://github.com/qurbat/blocked-hosts)
+[![Statistics](https://img.shields.io/badge/sites-6,086-brightgreen)](https://github.com/qurbat/blocked-hosts)
 ![GitHub last commit](https://img.shields.io/github/last-commit/qurbat/blocked-hosts?color=blue)
 
-This repository houses a periodically updated list of websites (first-level domains only) that are known to be blocked on the ACT Fibernet network. A current list of blocked hostnames can be found [here](https://github.com/qurbat/blocked-hosts/blob/main/compiled_block_list.txt). Historic results are available in the `output` directory.
+This repository houses a periodically updated list of websites (first-level domains only) that are known to be blocked on the ACT Fibernet network. A current list of hostnames blocked by ACT Fibernet can be found [here](https://github.com/qurbat/blocked-hosts/blob/main/compiled_block_list.txt). Historic results are available in the `output` directory.
 
 **Note:** The list(s) published here are not fully representative of all hostnames that might be blocked by ACT Fibernet at a given time.
 
 | date of test      | total hosts  | removed since last test    | added since last test            |
 |-------------------|--------------|----------------------------|----------------------------------|
-| February 13, 2023 | 5,981        | -                          | 547                              |
+| June 3, 2023      | 6,086         | 32 hosts removed           | 137 hosts added
+| February 13, 2023 | 5,981        | -                          | 547 hosts added                  |
 | January 26, 2023  | 5,434        | 96 hosts removed           | -                                |
 | January 7, 2023   | 5,530        | -                          | 128 hosts added                  |
 | May 26, 2022      | 5,402        | 87 hosts removed           | 33 hosts added                   |
