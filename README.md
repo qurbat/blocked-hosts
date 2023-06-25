@@ -4,6 +4,9 @@
 
 This repository houses a periodically updated list of websites (first-level domains only) that are known to be blocked on the ACT Fibernet network. A current list of hostnames blocked by ACT Fibernet can be found [here](https://github.com/qurbat/blocked-hosts/blob/main/compiled_block_list.txt). Historic results are available in the `output` directory.
 
+**Update 25-06-2023:** A list of websites blocked by Hathway Broadband can be found [here](https://github.com/qurbat/blocked-hosts/blob/main/compiled_block_list.txt). The DNS resolvers for Hathway Broadband have also been added to the `resources` folder. Support for checking websites blocked by Hathway Broadband will be added soon.
+
+
 **Note:** The list(s) published here are not fully representative of all hostnames that might be blocked by ACT Fibernet at a given time.
 
 | date of test      | total hosts  | removed since last test    | added since last test            |
