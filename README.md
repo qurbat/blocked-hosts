@@ -1,5 +1,5 @@
 # blocked-hosts
-[![Statistics](https://img.shields.io/badge/sites-13,504-brightgreen)](https://github.com/qurbat/blocked-hosts)
+[![Statistics](https://img.shields.io/badge/sites-13,782-brightgreen)](https://github.com/qurbat/blocked-hosts)
 ![GitHub last commit](https://img.shields.io/github/last-commit/qurbat/blocked-hosts?color=blue)
 
 This repository houses a periodically updated list of websites (first-level domains only) that are known to be blocked on the ACT Fibernet network. A current list of hostnames blocked by ACT Fibernet can be found [here](https://github.com/qurbat/blocked-hosts/blob/main/compiled_block_list.txt). Historic results are available in the `output` directory.
@@ -11,6 +11,7 @@ This repository houses a periodically updated list of websites (first-level doma
 
 | date of test      | total hosts  | removed since last test    | added since last test            |
 |-------------------|--------------|----------------------------|----------------------------------|
+| January 8, 2024   | 13,782       | -                          | 278 hosts added                  |
 | January 7, 2024   | 13,504       | -                          | 737 hosts added                  |
 | January 2, 2024   | 12,767       | -                          | 2455 hosts added                 |
 | December 31, 2023 | 10,312       | -                          | 4226 hosts added                 |
