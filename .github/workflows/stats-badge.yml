@@ -1,0 +1,24 @@
+name: Generate shields.io sites badge
+
+on:
+    push:
+        branches: main
+    pull_request:
+        branches: main
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        permissions:
+            contents: write
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v2
+            
+            - name: Generate badge link
+              run: sh .github/workflows/generate.sh
+              
+            - name: Commit changes
+              uses: stefanzweifel/git-auto-commit-action@v5
+              with:
+                commit_message: Update the shields.io site count badge
